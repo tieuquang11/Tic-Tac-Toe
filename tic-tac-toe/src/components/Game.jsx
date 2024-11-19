@@ -45,7 +45,7 @@ const Game = () => {
     }
     return null
   }
-
+  // Hàm minimax cho AI tìm nước đi tốt nhất
   const minimax = (squares, depth, isMaximizing) => {
     const winner = calculateWinner(squares)?.winner
     
@@ -77,7 +77,7 @@ const Game = () => {
       return bestScore
     }
   }
-
+ // Hàm tìm nước đi tốt nhất cho AI
   const findBestMove = (squares) => {
     let bestScore = -Infinity
     let bestMove = null
@@ -166,7 +166,7 @@ const Game = () => {
           className={`mode-button ${gameMode === 'ai' ? 'active' : ''}`}
           onClick={toggleGameMode}
         >
-          {gameMode === 'ai' ? '🤖 Playing with AI' : '👥 Playing with Human'}
+          {gameMode === 'ai' ? ' Playing with AI' : ' Playing with Human'}
         </button>
       </div>
       <div className={`status ${statusClass}`}>{status}</div>
@@ -176,7 +176,7 @@ const Game = () => {
         winLine={calculateWinner(board)?.line}
       />
       <button className="reset-button" onClick={resetGame}>
-        Play Again
+        Reset Game
       </button>
     </div>
   )

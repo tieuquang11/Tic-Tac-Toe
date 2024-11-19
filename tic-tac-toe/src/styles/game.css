@@ -4,7 +4,7 @@
 }
 
 h1 {
-  color: #dce2e6;
+  color: Black;
   margin-bottom: 30px;
 }
 
@@ -19,7 +19,7 @@ h1 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
-  color: white;
+  color: #84794d;
   padding: 10px;
   border-radius: 5px;
 }
@@ -34,13 +34,6 @@ h1 {
   color: white; 
 }
 
-.board {
-  border: 2px solid #333;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .board-row {
   display: flex;
@@ -49,16 +42,32 @@ h1 {
 .square {
   width: 80px;
   height: 80px;
-  border: 1px solid #999;
+  border: 2px solid #fff;
   font-size: 36px;
   font-weight: bold;
   cursor: pointer;
   background: #fff;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
+  margin: 5px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.square:not(.winning) {
+  background: #f0f0f0; 
 }
 
 .square:hover {
-  background: #f0f0f0;
+  background: #e0e0e0; 
+  transform: scale(1.05); 
+}
+
+.winning {
+  background-color: white; 
+  font-weight: bold;
+  color: black; 
 }
 
 .mode-button {
@@ -109,6 +118,14 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.x {
+  color:#2cccff; 
+}
+
+.o {
+  color: #ff6651; 
+}
+
 /* Responsive Design */
 @media (max-width: 480px) {
   .square {
@@ -127,7 +144,3 @@ h1 {
   }
 }
 
-.winning {
-  background-color: rgb(64, 117, 57); 
-  font-weight: bold;
-}
