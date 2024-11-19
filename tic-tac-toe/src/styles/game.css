@@ -1,0 +1,133 @@
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #dce2e6;
+  margin-bottom: 30px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.status.winner {
+  background-color: #5d6960; 
+  color: white; 
+}
+
+.status.draw {
+  background-color: #8b8e5b; 
+  color: white; 
+}
+
+.board {
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #999;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #fff;
+  transition: background-color 0.2s;
+}
+
+.square:hover {
+  background: #f0f0f0;
+}
+
+.mode-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #0074a6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mode-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.mode-button.active {
+  background-color: #0074a6;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #77747e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button:hover {
+  background-color: #da8888;
+  transform: translateY(-2px);
+}
+
+.reset-button:active {
+  background-color: #bd2130;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .status {
+    font-size: 20px;
+  }
+
+  .reset-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+.winning {
+  background-color: rgb(64, 117, 57); 
+  font-weight: bold;
+}
