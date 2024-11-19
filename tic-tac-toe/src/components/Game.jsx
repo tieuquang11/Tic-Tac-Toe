@@ -110,7 +110,7 @@ const Game = () => {
       setIsXNext(!isXNext)
     } else if (gameMode === 'ai' && isXNext) {
       setIsXNext(false)
-      // AI move
+      
       setTimeout(() => {
         if (!calculateWinner(newBoard) && newBoard.some(square => square === null)) {
           const bestMove = findBestMove(newBoard)
